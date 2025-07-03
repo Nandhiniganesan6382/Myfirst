@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>contact form</title>
+</head>
+<body>
+    <h2>Contact form</h2>
+    <p>Please fill in your information and well be sending your order in no time </p>
+    <form action="/submit" method="post">
+        <label for="Your name">Your name:</label>
+        <input type="text" id="first name" name="first name" placeholder="first name"required>
+        <input type="text" id="last name"  name="last name" placeholder="last name"required><br><br>
+
+        <label for="Your email">Your email:</label>
+        <input type="text" id="email" name="email" placeholder="enter your email" required><br><br>
+
+        <label for="Phone number">Phone*:</label>
+        <input type="text" id="###" name="###" placeholder="###">
+        <input type="text" id="###" name="###" placeholder="###">
+        <input type="text" Id="###" name="###" placeholder="###"><br><br><br>
+
+        <label for="Message subject">Message subject*:</label>
+        <select name="message subject" id="message subject">
+            <option value="">--others--</option>
+            <option value="job application">job application</option>
+            <option value="notification">notification</option>
+            <option value="request">request</option>
+        </select><br><br>
+        
+        <label for="Message">Message:</label>
+        <textarea name="Message" id="Message" size="10"></textarea><br>
+
+        <label for="verification">Verification*:</label>
+        <input type="text" id="i am not a robot" name:"i am not a robot" placeholder="i am not a robot"><br>
+
+        <input type="submit" value="submit" onclick="submit()">
+       </form>    
+</body>
+</html>
