@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Filter Users</title>
+</head>
+<body>
+  <h1>Users Above Age 25</h1>
+  <ul id="userList"></ul>
+
+  <script>
+    // Sample user data
+    const users = [
+      { name: "Alice", age: 22 },
+      { name: "Bob", age: 30 },
+      { name: "Charlie", age: 28 },
+      { name: "Diana", age: 19 },
+      { name: "Edward", age: 35 }
+    ];
+
+    // Filter users above age 25
+    const filteredUsers = users.filter(user => user.age > 25);
+
+    // Get the list container
+    const userList = document.getElementById("userList");
+
+    // Display filtered users
+    filteredUsers.forEach(user => {
+      const li = document.createElement("li");
+      li.textContent = `${user.name} (Age: ${user.age})`;
+      userList.appendChild(li);
+    });
+  </script>
+</body>
+</html>
