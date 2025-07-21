@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Users Over 50 After Doubling Age</title>
+</head>
+<body>
+  <h1>Users Over 50 (After Doubling Age)</h1>
+  <ul id="userList"></ul>
+
+  <script>
+    // Original user data
+    const users = [
+      { name: "Alice", age: 22 },
+      { name: "Bob", age: 30 },
+      { name: "Charlie", age: 28 },
+      { name: "Diana", age: 19 },
+      { name: "Edward", age: 35 }
+    ];
+
+    // Step 1: Double the ages
+    const doubledAges = users.map(user => ({
+      ...user,
+      age: user.age * 2
+    }));
+
+    // Step 2: Filter users whose new age is over 50
+    const overFiftyUsers = doubledAges.filter(user => user.age > 50);
+
+    // Step 3: Display names of users over 50
+    const userList = document.getElementById("userList");
+    overFiftyUsers.forEach(user => {
+      const li = document.createElement("li");
+      li.textContent = `${user.name} (New Age: ${user.age})`;
+      userList.appendChild(li);
+    });
+  </script>
+</body>
+</html>
