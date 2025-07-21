@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Capitalize User Names</title>
+</head>
+<body>
+  <h1>Capitalized User Names</h1>
+  <ul id="userList"></ul>
+
+  <script>
+    // Sample user data
+    const users = [
+      { name: "alice", age: 22 },
+      { name: "bob", age: 30 },
+      { name: "charlie", age: 28 },
+      { name: "diana", age: 19 },
+      { name: "edward", age: 35 }
+    ];
+
+    // Capitalize names using map
+    const capitalizedUsers = users.map(user => {
+      return {
+        ...user,
+        name: user.name.charAt(0).toUpperCase() + user.name.slice(1)
+      };
+    });
+
+    // Display capitalized names
+    const userList = document.getElementById("userList");
+    capitalizedUsers.forEach(user => {
+      const li = document.createElement("li");
+      li.textContent = `${user.name} (Age: ${user.age})`;
+      userList.appendChild(li);
+    });
+  </script>
+</body>
+</html>
