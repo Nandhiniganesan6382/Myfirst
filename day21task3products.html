@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Filtered Products</title>
+</head>
+<body>
+  <h1>Products Over $100</h1>
+  <ul id="productList"></ul>
+
+  <script>
+    // Product list
+    const products = [
+      { name: "laptop", price: 900 },
+      { name: "mouse", price: 25 },
+      { name: "monitor", price: 300 }
+    ];
+
+    // Filter products where price > 100
+    const expensiveProducts = products.filter(product => product.price > 100);
+
+    // Display names of filtered products
+    const productList = document.getElementById("productList");
+    expensiveProducts.forEach(product => {
+      const li = document.createElement("li");
+      li.textContent = product.name;
+      productList.appendChild(li);
+    });
+  </script>
+</body>
+</html>
